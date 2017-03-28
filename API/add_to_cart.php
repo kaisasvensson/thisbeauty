@@ -3,7 +3,7 @@ session_start();
 header('Content-Type: application/json');
 
 if (isset ($_GET['id'])) {
-    require 'db.php';
+    require 'config.php';
     $stm_select = $pdo->prepare('SELECT * FROM products WHERE id=' . $_GET['id']);
     $stm_select->execute();
     foreach ($stm_select as $row) {
