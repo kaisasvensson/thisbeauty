@@ -4,9 +4,9 @@ $email = $_SESSION['email'];
 
 $stm_select = $pdo->prepare('SELECT * FROM `order` WHERE email = :email'); 
 $stm_select->execute(['email' => $email]);
-$resultat = array();
+$result = array();
 
 foreach ($stm_select as $row) {
-    $resultat[] = $row;
+    $result[] = $row;
 }
 echo json_encode($result);
