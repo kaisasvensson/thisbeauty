@@ -1,7 +1,6 @@
 <?php
-
-require("db.php");
-include("auth.php");
+require 'config.php';
+require 'auth.php';
 
 $email = $_SESSION['email']; //sparar den e-post som användaren är inloggad på
 $datetime = date("Y-m-d H:i:s"); //Datum i datetime-format
@@ -18,13 +17,5 @@ unset($_SESSION['cart']); //Tar bort produkterna i varukorgen efter slutfört k�
 echo json_encode(true);
 }
 
-//echo json_encode($_SESSION['cart']);
-?>
-<!--
-		<form action="#" method="post">
-		<button type="submit" name="submit">Köp</button>
-		</form>
-
-        -->
 
         
