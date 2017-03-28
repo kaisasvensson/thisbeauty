@@ -1,5 +1,5 @@
 require 'auth.php';
-require 'db.php';
+require 'config.php';
 $email = $_SESSION['email'];
 
 $stm_select = $pdo->prepare('SELECT * FROM `order` WHERE email = :email'); 
